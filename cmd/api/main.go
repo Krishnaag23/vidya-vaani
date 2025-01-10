@@ -1,14 +1,14 @@
 package main
 
 import (
-    "log"
-    "net/http"
+	"log"
+	"net/http"
 
-    "github.com/gin-gonic/gin"
-    "github.com/krishnaag23/vidya-vaani/internal/asr"
-    "github.com/krishnaag23/vidya-vaani/internal/config"
-    "github.com/krishnaag23/vidya-vaani/internal/middleware"
-    "github.com/krishnaag23/vidya-vaani/internal/streaming" 
+	"github.com/gin-gonic/gin"
+	"github.com/krishnaag23/vidya-vaani/internal/asr"
+	"github.com/krishnaag23/vidya-vaani/internal/config"
+	"github.com/krishnaag23/vidya-vaani/internal/middleware"
+	"github.com/krishnaag23/vidya-vaani/internal/streaming"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
     config.LoadConfig()
 
     
-    kafkaProducer := streaming.NewKafkaProducer("localhost:9092")
+    kafkaProducer := streaming.NewKafkaProducer("kafka:9092")
 
     
     router := gin.Default()
