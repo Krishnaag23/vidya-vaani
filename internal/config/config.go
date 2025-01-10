@@ -11,7 +11,7 @@ var (
 
 func LoadConfig() {
 	Port = getEnv("PORT", "8080")
-	DatabaseURL = getEnv("DATABASE_URL", "postgres://youruser:yourpassword@db:5432/vidya?sslmode=disable")
+	DatabaseURL = getEnv("DATABASE_URL", "postgres://krishnaag23:testingpass@db:5432/vidya?sslmode=disable")
 }
 
 func getEnv(key, defaultValue string) string {
